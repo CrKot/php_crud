@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 ?>
 <div>
@@ -7,7 +6,7 @@
         <div class="add-item__title">Save / Editor form</div>
         <div>
             <form action="/" method="POST">
-
+                <input type="text" name="id" value="<?= $_GET['id'] ?? null ?>" style="display: none">
                 <label>
                     Name
                     <input type="text" name="name" placeholder="name" value="<?= $_GET['name'] ?? '' ?>">

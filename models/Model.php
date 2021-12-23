@@ -18,8 +18,8 @@
 
     public function save($name, $phone, $text)
     {
-      $query = "INSERT INTO crud_php (name, phone, text) VALUES ('$name, $phone, $text')";
-      $res = $this->connection->query($query);
+      $query = "INSERT INTO crud_php SET name='$name', phone='$phone', text='$text'";
+      $this->connection->query($query);
     }
 
     public function getAll()
@@ -39,12 +39,12 @@
     public function delete($id)
     {
       $query = "DELETE FROM crud_php WHERE id=$id";
-      $res = $this->connection->query($query);
+      $this->connection->query($query);
     }
 
     public function update($id, $name, $phone, $text)
     {
       $query = "UPDATE crud_php SET name='$name', phone='$phone', text='$text' WHERE id='$id'";
-      $res = $this->connection->query($query);
+      $this->connection->query($query);
     }
   }
