@@ -1,0 +1,22 @@
+.catalog {
+    display: flex;
+}
+
+.catalog__cart {
+    border: 1px solid red;
+    width: calc(100% / 4);
+    padding: 10px 15px;
+    margin: 0 0 15px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog__field-name {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.catalog__btn-block {
+    display: flex;
+    margin-top: auto;
+}

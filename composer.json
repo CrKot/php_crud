@@ -1,0 +1,17 @@
+{
+    "name": "artemkrv/php-crud",
+    "autoload": {
+        "psr-4": {
+            "Artemkrv\\PhpCrud\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Artem Salikhov",
+            "email": "artemsalikhov@mail.ru"
+        }
+    ],
+    "require": {
+      "ext-mysqli": "*"
+    }
+}
