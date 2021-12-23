@@ -2,6 +2,7 @@
 @import "footer.css";
 @import "container.css";
 @import "catalog.css";
+@import "add-item.css";
 
 html {
     width: 100%;
