@@ -17,10 +17,10 @@
       $_POST = [];
       header("Location: /index.php");
     }
-  ?>
+    ?>
     <section class="catalog">
         <?php foreach ($items as $item):
-        ['id' => $id, 'name' => $name, 'phone' => $phone, 'text' => $text ] = $item;
+          ['id' => $id, 'name' => $name, 'phone' => $phone, 'text' => $text ] = $item;
         ?>
           <div class="catalog__cart">
               <span class="catalog__field-name">Name</span>

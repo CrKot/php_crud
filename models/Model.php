@@ -4,7 +4,7 @@
 
   class Model
   {
-    private $host = '127.0.0.1';
+    private $host = 'db';
     private $username = 'root';
     private $password = 'example';
     private $dbname = 'oldSchool';
@@ -13,16 +13,23 @@
     public function __construct()
     {
       $this->connection = new mysqli($this->host, $this->username, $this->password, $this->dbname);
+//      $query = "CREATE TABLE crud_php (
+//        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+//        name VARCHAR(20),
+//        phone BIGINT,
+//        text VARCHAR(90)
+//    )";
+//      $this->connection->query($query);
       return $this->connection;
     }
 
-    public function save($name, $phone, $text)
+    public function save(string $name,int $phone,string $text): void
     {
       $query = "INSERT INTO crud_php SET name='$name', phone='$phone', text='$text'";
       $this->connection->query($query);
     }
 
-    public function getAll()
+    public function getAll(): array
     {
       $query = "SELECT * FROM crud_php";
       $res = $this->connection->query($query);
@@ -33,16 +40,16 @@
         }
         return $data;
       }
-      return 'fail';
+      return [];
     }
 
-    public function delete($id)
+    public function delete(int $id): void
     {
       $query = "DELETE FROM crud_php WHERE id=$id";
       $this->connection->query($query);
     }
 
-    public function update($id, $name, $phone, $text)
+    public function update(int $id,string $name,string $phone,string $text): void
     {
       $query = "UPDATE crud_php SET name='$name', phone='$phone', text='$text' WHERE id='$id'";
       $this->connection->query($query);

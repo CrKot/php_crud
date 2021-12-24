@@ -1,14 +1,16 @@
 .catalog {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .catalog__cart {
     border: 1px solid red;
-    width: calc(100% / 4);
+    width: calc(100% / 4 - 30px);
     padding: 10px 15px;
     margin: 0 0 15px 15px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .catalog__field-name {

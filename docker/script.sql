@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS oldSchool;
+
+USE oldSchool;
+
+CREATE TABLE IF NOT EXISTS crud_php (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(20),
+    phone BIGINT,
+    text VARCHAR(200)
+);
