@@ -13,6 +13,8 @@
     box-sizing: border-box;
 }
 
+.catalog__cart
+
 .catalog__field-name {
     font-size: 25px;
     margin-top: 10px;
@@ -21,4 +23,16 @@
 .catalog__btn-block {
     display: flex;
     margin-top: auto;
+}
+
+@media (max-width: 1200px) {
+    .catalog__cart {
+        width: calc(100% / 3 - 30px);
+    }
+}
+
+@media (max-width: 850px) {
+    .catalog__cart {
+        width: calc(100% / 2 - 30px);
+    }
 }
